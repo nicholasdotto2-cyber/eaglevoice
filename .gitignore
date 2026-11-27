@@ -1,0 +1,29 @@
+# Build outputs
+target/
+node_modules/
+dist/
+dist-ssr/
+transcribe-libs/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Logs
+*.log
+logs/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+*.swp
+*.suo
+

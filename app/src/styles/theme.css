@@ -1,0 +1,90 @@
+/* Colori di Eagle Voice: fondo blu cobalto pieno, testi e filetti bianchi.
+
+   Tema "Cobalto" (scuro) di default, anche con `theme` = "system"; il tema
+   chiaro vale solo con `data-theme="light"`, scelto nelle Impostazioni.
+
+   Ruoli:
+   - background: il cobalto #3039BB, fondo dell'hub.
+   - surface: card, bianco all'8 % sul cobalto (scritto pieno, #4149C0, così una
+     card dentro un'altra non si schiarisce due volte).
+   - hairline: filetti, bianco al 22 % sul cobalto (#5E65CA).
+   - text: bianco. mid-gray: testo secondario, bianco al 78 % (#D2D4F0).
+     faint: segnaposto e terziario, bianco al 74 % (#C9CBEE).
+   - logo-primary: il "primario" leggibile, qui bianco (testo attivo, bordo di
+     fuoco, interruttore acceso). background-ui e on-primary: bottone primario
+     bianco con il testo cobalto.
+   - accent: segni decorativi (voce attiva, punti), bianco.
+   - warning, error, success: toni chiari che sul cobalto restano sopra 4,5:1;
+     i chip pieni usano rosso e ambra scuri con il testo bianco.
+   Rapporti di contrasto controllati in automatico. */
+
+:root {
+  --color-cobalt: #3039bb;
+  --color-cobalt-deep: #1f2680;
+  --color-cobalt-night: #161b66;
+  --color-cobalt-light: #5a63e0;
+  --color-cobalt-glow: #8c94ff;
+
+  --color-text: #ffffff;
+  --color-background: #3039bb;
+  --color-surface: #4149c0;
+  --color-hairline: #5e65ca;
+  --color-mid-gray: #d2d4f0;
+  --color-faint: #c9cbee;
+  --color-logo-primary: #ffffff;
+  --color-background-ui: #ffffff;
+  --color-on-primary: #3039bb;
+  --color-logo-stroke: #ffffff;
+
+  --color-accent: #ffffff;
+  --color-accent-deep: #1f2680;
+
+  --color-warning: #ffd37a;
+  --color-error: #ffcdd0;
+  --color-success: #8ef0d2;
+
+  /* Chip pieni con il testo bianco. */
+  --color-chip-error: #a3243a;
+  --color-chip-warning: #8a5300;
+
+  /* Impaginazione dell'hub: pannello delle pagine, voce attiva e hover
+     della barra laterale, linee a mirino. */
+  --color-panel: #2a32ad;
+  --color-nav-active: rgba(255, 255, 255, 0.16);
+  --color-nav-hover: rgba(255, 255, 255, 0.09);
+  --color-overlay: rgba(10, 12, 50, 0.55);
+  --ev-line: rgba(255, 255, 255, 0.28);
+  --ev-line-strong: rgba(255, 255, 255, 0.5);
+
+  color-scheme: dark;
+}
+
+/* Tema chiaro (solo se scelto in Impostazioni, Sistema, App): fondo neutro
+   chiaro, pannello bianco, cobalto come colore primario. Il cobalto pieno
+   resta il tema di sempre ("Cobalto", anche con il valore "system").
+   Contrasti: testo #14172e e mid-gray #4a4f6b su bianco e su #f4f5fa
+   sopra 4,5:1. */
+:root[data-theme="light"] {
+  --color-text: #14172e;
+  --color-background: #f4f5fa;
+  --color-surface: #f7f8fc;
+  --color-hairline: #e1e3ee;
+  --color-mid-gray: #4a4f6b;
+  --color-faint: #565b78;
+  --color-logo-primary: #3039bb;
+  --color-background-ui: #3039bb;
+  --color-on-primary: #ffffff;
+  --color-logo-stroke: #3039bb;
+  --color-accent: #3039bb;
+  --color-accent-deep: #1f2680;
+  --color-warning: #8a5300;
+  --color-error: #a3243a;
+  --color-success: #0b6b5b;
+  --color-panel: #ffffff;
+  --color-nav-active: #e6e8f3;
+  --color-nav-hover: #eceef6;
+  --color-overlay: rgba(20, 23, 46, 0.35);
+  --ev-line: rgba(48, 57, 187, 0.2);
+  --ev-line-strong: rgba(48, 57, 187, 0.4);
+  color-scheme: light;
+}
